@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: "Lugrasimo", cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.image{
+    overflow: hidden;
+}
+
+img{
+    width: auto;
+    height: 100%;
+}
+
+.card{
+    height: 450px;
+    aspect-ratio: 2/3;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    border-radius: 15px;
+    padding: 10px;
+
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0%, rgba(199,146,94,1) 100%);
+}
+
+.title, .image, .details{
+    border-radius: 5px;
+}
+
+.title, .details, li{
+    display: flex;
+    align-items: center;
+}
+
+h1, li span, .details{
+    flex-grow: 1;
+}
+
+li span{
+    font-weight: bold;
+}
+
+p, ul{
+    width: 50%;
+    font-size: 12px;
+}
+
+.card, .image, .title span{
+    border: 1px solid black;
+}
+
+.title span{
+    background-color: rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    height: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 5px;
+}
+
+@keyframes card-hover{
+    from{
+        height: 450px;
+        box-shadow: 0 0 0 gray;
+    }
+    to{
+        height: 500px;
+        box-shadow: 10px 10px 15px gray;
+    }
+}
+
+.card:hover{
+    height: 500px;
+    box-shadow: 10px 10px 15px gray;
+    animation-name: card-hover;
+    animation-duration: 0.5s;
+}
+
+@keyframes card-unhover{
+    from{
+        height: 500px;
+        box-shadow: 10px 10px 15px gray;
+    }
+    to{
+        height: 450px;
+        box-shadow: 0 0 0 gray;
+    }
+}
+
+.card:not(hover){
+    animation-name: card-unhover;
+    animation-duration: 0.5s;
+} 

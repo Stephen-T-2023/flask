@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        {{ form.name.label }} {{ form.name() }}
+        {{ form.submit() }}
+    </form>
+    <h1>Hello {{name}}</h1>
+    <ul>
+            <a href="http://127.0.0.1:5000/card">{{comments[0]}}</a>
+            <a href="http://127.0.0.1:5000/user/{{name}}">{{comments[1]}}</a>
+    </ul>
+    <div class="image">
+        <center>
+            <img src="{{ url_for('static', filename='blockman.png') }}" alt="">
+        </center>
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading Card</title> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="card">
+        <div class="title">
+            <h1>Ouroboros</h1>
+            <span>No.O</span>
+        </div>
+        <div class="image">
+            <center>
+                <img src="{{ url_for('static', filename='ouroboros.png') }}" alt="">
+            </center>
+        </div>
+        <div class="details">
+            <p>
+                <strong>Fact File:</strong>
+                <br>
+                The Eternal cycle: The ouroboros represents the eternal cycle of destruction and rebirth becoming stronger with every cycle.
+            </p>
+            <ul>
+                <li><span>Attack:</span>1</li>
+                <li><span>Health:</span>1</li>
+                <li><span>Defence:</span>2</li>
+                <li><span>Rarity:</span>Lv3</li>
+                <li><span>Effect: </span>When destroyed return to hand and gain 2 Attack and 2 Health</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
